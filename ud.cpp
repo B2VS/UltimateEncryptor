@@ -119,7 +119,7 @@ int main()
     ifstream inputFile("Dinput.txt");
     ofstream outputFile("Doutput.txt");
     getline(keyFile, inputString);
-    if (inputString.size() < 20 || inputString.size() > 1000)
+    if (inputString.size() < 20 || inputString.size() > 10000)
         return 0;
     stringToInts(key, inputString);
     int index_sum = 0;
@@ -129,7 +129,7 @@ int main()
     {
         int offset = 0;
         getline(inputFile, inputString);
-        if (inputString.size() > 1000 || inputString.size() == 0 || inputFile.bad() || inputFile.fail())
+        if (inputString.size() > 10000 || inputString.size() == 0 || inputFile.bad() || inputFile.fail())
             return 0;
         stringToInts(cipherText, inputString);
         for (int i = 0; i < cipherText.size(); ++i)
